@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Aslan Family Calendar — a shared family calendar and chore board for a wall-mounted Android tablet.">
+<title>Aslan Family Calendar</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Geist:wght@400;500;600&display=swap">
+<style>
+  :root {
+    --bg: #F3EDE2;
+    --surface: #FFFCF6;
+    --ink: #2E2A23;
+    --ink-2: #6E6557;
+    --ink-3: #9B9182;
+    --line: #E4DACA;
+    --accent: #17808A;
+    --accent-ink: #0A565D;
+    --accent-subtle: #E2EDE9;
+    --shadow: 0 1px 2px rgba(74,58,36,.06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1F1B16; --surface: #2A251E; --ink: #F3EDE2; --ink-2: #C9BFAE; --ink-3: #9B9182;
+      --line: #3D362C; --accent: #4FB3BC; --accent-ink: #BFE3E6; --accent-subtle: #22403F;
+      --shadow: 0 1px 2px rgba(0,0,0,.3);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1F1B16; --surface: #2A251E; --ink: #F3EDE2; --ink-2: #C9BFAE; --ink-3: #9B9182;
+    --line: #3D362C; --accent: #4FB3BC; --accent-ink: #BFE3E6; --accent-subtle: #22403F;
+    --shadow: 0 1px 2px rgba(0,0,0,.3);
+  }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 16px; line-height: 1.6;
+    padding: 0 20px; padding-block: 48px 72px;
+  }
+  main { max-width: 680px; margin: 0 auto; }
+  .mark {
+    display: inline-flex; align-items: center; gap: 12px; color: var(--ink-2);
+    font-size: 12px; letter-spacing: .08em; text-transform: uppercase; font-weight: 600;
+  }
+  .mark i {
+    display: inline-grid; place-items: center; width: 32px; height: 32px; border-radius: 10px;
+    background: var(--accent); color: #FFFCF6; font: 20px/1 "Instrument Serif", Georgia, serif; font-style: normal;
+  }
+  h1 {
+    font-family: "Instrument Serif", Georgia, serif; font-weight: 400; font-size: 44px; line-height: 1.1;
+    letter-spacing: -.01em; margin: 20px 0 8px; text-wrap: balance;
+  }
+  .meta { color: var(--ink-3); font-size: 14px; margin: 0 0 32px; }
+  .summary {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow);
+    padding: 20px 24px; margin: 0 0 40px;
+  }
+  .summary p { margin: 0; }
+  .summary strong { color: var(--accent-ink); font-weight: 600; }
+  h2 {
+    font-family: "Instrument Serif", Georgia, serif; font-weight: 400; font-size: 26px; line-height: 1.2;
+    margin: 40px 0 10px; text-wrap: balance;
+  }
+  p, li { color: var(--ink); max-width: 65ch; }
+  p { margin: 0 0 14px; }
+  ul { padding-left: 22px; margin: 0 0 14px; }
+  li { margin: 0 0 6px; }
+  code {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 14px;
+    background: var(--accent-subtle); color: var(--accent-ink); padding: 1px 6px; border-radius: 6px;
+  }
+  table { border-collapse: collapse; width: 100%; margin: 6px 0 18px; font-size: 15px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--ink-3); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; font-weight: 600; }
+  .table-wrap { overflow-x: auto; }
+  a { color: var(--accent-ink); }
+  footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--ink-3); font-size: 14px; }
+  .links { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0 0; }
+  .links a {
+    display: inline-block; padding: 10px 16px; border-radius: 12px; text-decoration: none; font-weight: 500;
+    background: var(--accent); color: #FFFCF6;
+  }
+  .links a.quiet { background: var(--accent-subtle); color: var(--accent-ink); }
+  ul.features { padding-left: 22px; }
+</style>
+</head>
+<body>
+<main>
+  <span class="mark"><i>a</i>Aslan Family Calendar</span>
+  <h1>The family's week, on the wall</h1>
+  <p class="meta">A shared calendar and chore board for a tablet that stays on all day · Android</p>
+
+  <div class="summary">
+    <p><strong>What it does.</strong> Everyone's events in their own colour, chores that come back on their own, and an optional link to the Google calendars you already use. Everything is stored on the tablet itself — no accounts, no servers, no ads.</p>
+  </div>
+
+  <h2>Features</h2>
+  <ul class="features">
+    <li>Timeline (3 / 5 / 7 days), agenda, week and month views</li>
+    <li>One colour per household member; drag an event to move it</li>
+    <li>Chores with steps, priority and repeat rules, grouped by person or by day</li>
+    <li>Optional Google Calendar sync — pick calendars, one-way or two-way</li>
+    <li>"Mark as important": the day gets a red ring so nobody misses it</li>
+    <li>Kiosk mode for a wall-mounted tablet; works fully offline</li>
+  </ul>
+
+  <div class="links">
+    <a href="https://play.google.com/store/apps/details?id=com.aslan.familycalendar">Get it on Google Play</a>
+    <a class="quiet" href="privacy-policy.html">Privacy Policy</a>
+    <a class="quiet" href="terms-of-service.html">Terms of Service</a>
+  </div>
+
+  <h2>Contact</h2>
+  <p>Questions or feedback: <a href="mailto:aaslanx@gmail.com">aaslanx@gmail.com</a>.</p>
+
+  <footer>Aslan Family Calendar · <a href="privacy-policy.html">Privacy</a> · <a href="terms-of-service.html">Terms</a></footer>
+</main>
+</body>
+</html>
